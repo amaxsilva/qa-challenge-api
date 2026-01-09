@@ -1,6 +1,6 @@
 # Desafio de Automação de API - DemoQA / BookStore
 
-Este repositório contém a automação de testes para o swegger[Book Store API](https://demoqa.com/swagger/), utilizando **Cypress** com **BDD (Cucumber)
+Este repositório contém a automação de testes para o swegger [Book Store API] (https://demoqa.com/swagger/), utilizando **Cypress** com **BDD (Cucumber)
 
 ## 🚀 Tecnologias
 * Cypress API / JS
