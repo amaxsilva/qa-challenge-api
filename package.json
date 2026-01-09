@@ -1,0 +1,26 @@
+{
+  "name": "desafio_1_api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean:reports": "if exist cypress\\reports rmdir /s /q cypress\\reports && mkdir cypress\\reports",
+    "pretest": "npm run clean:reports",
+    "test": "npx cypress run --reporter mochawesome --reporter-options overwrite=false,html=false,json=true",
+    "posttest": "npx mochawesome-merge cypress/reports/.jsons/*.json > cypress/reports/report.json && npx mochawesome-report-generator cypress/reports/report.json --reportDir cypress/reports --inline"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^24.0.0",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.8",
+    "ajv": "^8.17.1",
+    "cypress": "^15.8.2",
+    "cypress-mochawesome-reporter": "^4.0.2",
+    "mochawesome": "^7.1.4",
+    "mochawesome-merge": "^5.1.0",
+    "mochawesome-report-generator": "^6.3.2"
+  }
+}
